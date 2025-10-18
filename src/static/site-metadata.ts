@@ -15,9 +15,9 @@ const getBasePath = () => {
 };
 
 const data: ISiteMetadataResult = {
-  siteTitle: 'Running Page',
-  siteUrl: 'https://yihong.run',
-  logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTtc69JxHNcmN1ETpMUX4dozAgAN6iPjWalQ&usqp=CAU',
+  siteTitle: 'Running Otaku',
+  siteUrl: 'https://xiongjia.github.io/running_page/',
+  logo: `${getBasePath()}/images/logo.png`,
   description: 'Personal site and blog',
   navLinks: [
     {
@@ -26,12 +26,8 @@ const data: ISiteMetadataResult = {
     },
     {
       name: 'Blog',
-      url: 'https://github.com/yihong0618/gitblog',
-    },
-    {
-      name: 'About',
-      url: 'https://github.com/yihong0618/running_page/blob/master/README-CN.md',
-    },
+      url: 'https://xiongjia.github.io/',
+    }
   ],
 };
 

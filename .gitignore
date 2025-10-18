@@ -26,3 +26,8 @@ route.png
 route.svg
 
 .env
+
+
+GPX_OUT/
+imported.json
+run_page/data.db
