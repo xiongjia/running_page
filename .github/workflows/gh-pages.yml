@@ -75,10 +75,8 @@ jobs:
         uses: actions/setup-node@v5
         with:
           node-version: '20'
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 8.9.0
-          standalone: true
+      - name: Install pnpm
+        run: npm install -g pnpm@8
 
       - name: Get pnpm store directory
         shell: bash
