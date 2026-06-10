@@ -76,7 +76,7 @@ jobs:
         with:
           node-version: '20'
       - name: Enable corepack
-        run: npm install -g corepack@latest && corepack enable pnpm
+        run: corepack enable pnpm
 
       - name: Get pnpm store directory
         shell: bash
