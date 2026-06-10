@@ -55,9 +55,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 8
+      - name: Enable corepack
+        run: npm install -g corepack@latest && corepack enable pnpm
 
       - name: Install dependencies
         run: pnpm install
