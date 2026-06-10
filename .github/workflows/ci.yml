@@ -2,9 +2,6 @@ name: CI
 
 on: [push, pull_request]
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 jobs:
   python_lint_and_test:
     runs-on: ubuntu-latest
@@ -55,11 +52,13 @@ jobs:
           persist-credentials: false
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: ${{ matrix.node }}
-      - name: Enable corepack
-        run: npm install -g corepack@latest && corepack enable pnpm
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 8.9.0
+          standalone: true
 
       - name: Install dependencies
         run: pnpm install
